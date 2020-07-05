@@ -233,41 +233,81 @@ while (i < arrOne.length) {
 for (let i=0; i <arrOne.length; i++){
     console.log(arrOne[i]);
 }
-// 3. перебрати циклом while та вивести  числа тільки з непарним індексом
+// 29.3. перебрати циклом while та вивести  числа тільки з непарним індексом
 let i = 1
 while (i < arrOne.length) {
     console.log(arrOne[i]);
     i+= 2
 }
 
-// 4. перебрати циклом for та вивести  числа тільки з непарним індексом
+// 29.4. перебрати циклом for та вивести  числа тільки з непарним індексом
 for (let i=1; i <arrOne.length; i+=2) {
     console.log(arrOne[i]);
 }
 
-// 5. перебрати циклом while та вивести  числа тільки парні  значення
+// 29.5. перебрати циклом while та вивести  числа тільки парні  значення
 let i = 0
 while (i < arrOne.length) {
     console.log(arrOne[i]);
     i+= 2
 }
-// 6. перебрати циклом for та вивести  числа тільки парні  значення
+// 29.6. перебрати циклом for та вивести  числа тільки парні  значення
 for (let i=0; i <arrOne.length; i+=2) {
     console.log(arrOne[i]);
 }
-// 7. замінити кожне число кратне 3 на слово "okten"
+// 29.7. замінити кожне число кратне 3 на слово "okten"
 for (let i=3; i <arrOne.length; i+=3) {
     arrOne[i] = 'okten';
 }
 
-// 8. вивести масив в зворотньому порядку.
+// 29.8. вивести масив в зворотньому порядку.
 console.log(arrOne);
 for (let i=arrOne.length; i >= 0; i--) {
     console.log(arrOne[i]);
 }
-// 9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)
+// 29.9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)
 
-// 10
+    //1
+let i=arrOne.length;
+while (i >= 0) {
+    console.log(arrOne[i]);
+    i--
+}
+    //2
+for (let i=arrOne.length; i >=0; i--) {
+    console.log(arrOne[i]);
+}
+    //3
+let i = 9;
+while (i >= 0) {
+    console.log(arrOne[i]);
+    i-=2;
+}
+    //4
+for (let i=9; i >=0; i-=2) {
+    console.log(arrOne[i]);
+}
+    //5
+let i = 8;
+while (i >= 0) {
+    console.log(arrOne[i]);
+    i-=2;
+}
+    //6
+for (let i=8; i >=0; i-=2) {
+    console.log(arrOne[i]);
+}
+    //7
+
+for (let i=9; i >= 0; i-=3) {
+    arrOne[i] = 'okten';
+}
+console.log(arrOne);
+
+
+
+// 29.10
 //  створити пустий масив та :
 // - заповнити його 50 парними числами за допомоги циклу.
+let arr
 // - заповнити його 50 непарними числами за допомоги циклу.
