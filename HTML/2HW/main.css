@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    line-height: 1.6;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* General */
+.general {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: url("img/general.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.title-block {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.gen-title:before {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    margin: 30px auto 0px;
+    background-color: white;
+}
+
+.gen-title {
+    color: white;
+    font-size: 150px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.gen-title:after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    margin: 10px auto 0px;
+    background-color: white;
+}
+
+.pre-title {
+    font-size: 32px;
+    color: white;
+    font-style: italic;
+}
+
+/* Button*/
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px 30px;
+    border: 5px solid;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    margin: 30px auto 0px;
+
+
+}
+
+/* Section */
+.section {
+    padding: 50px 0;
+}
+
+.section-top {
+    margin-bottom: 30px;
+    max-width: 1100px;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 45px;
+    text-transform: uppercase;
+}
+
+.section-title:after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    margin: 5px auto 0px;
+    background-color: black;
+}
+
+/* Cast */
+
+.cast-img {
+    background: black;
+}
+
+.cast-item:hover .cast-img img {
+    opacity: .5;
+}
+
+.cast-item:hover .cast-name {
+opacity: 1;
+}
+
+.cast-item {
+    width: 330px;
+    position: relative;
+}
+
+.cast-img img {
+    display: block;
+    transition: opacity .1s linear;
+}
+
+.cast1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.cast2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cast-name {
+    width: 100%;
+    color: white;
+    font-style: oblique;
+    font-size: 30px;
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    top: 30%;
+    left: 0;
+    z-index: 2;
+    transition: opacity .1s linear;
+}
