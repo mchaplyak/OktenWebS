@@ -1,4 +1,34 @@
 //Module2
+
+//Task0
+// - Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+for (let i=0; i < 10; i++) {
+    console.log(i);
+    document.write(i);
+}
+// - Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+for (let i=0; i<100; i++) {
+    console.log(i);
+    document.write (i);
+}
+// - Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
+for (let i=0; i < 200, i+=2;) {
+    console.log(i);
+    document.write(i);
+}
+// - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
+for (let i=0; i < 200; i+=2) {
+    console.log(i);
+    document.write(i);
+}
+// - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
+for (let i=1; i < 200; i+=2) {
+    console.log(i);
+    document.write(i);
+}
+
+
+
 //Task1: створити масив та вивести його в консоль:
 // - з 5 числових значень
 // - з 5 стічкових значень
@@ -35,7 +65,10 @@ for (let i=0; i <= 10; i++ ) {
 
 //Task5: - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
 
-
+let i =0;
+while (i < 20) {
+    document.write(`<h1>Довільний текст</h1>`)
+    i++
 //Task6: - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.
 let i =0;
 while (i < 20) {
@@ -183,15 +216,34 @@ let arrOnePopped = arrOne.pop();
 console.log(arrOnePopped);
 
 //Task21: - Дан масив [1, 2, 3, 4, 5]. За допомогою методу/функції slice перетворіть масив в [4, 5].
+let arrOne = [1, 2, 3, 4, 5];
+console.log(arrOne.slice(3))
+
 //Task22: - Дан масив [1, 2, 3, 4, 5]. За допомогою методу/функції slice перетворіть масив в [1,2].
+let arrOne = [1, 2, 3, 4, 5];
+console.log(arrOne.slice(0, 2));
+
 //Task23: - Дан масив [1, 2, 3, 4, 5]. За допомогою методу/функції splice перетворіть масив в [1, 4, 5].
+
 //Task24: - Дан масив [1, 2, 3, 4, 5]. За допомогою методу/функції splice зробіть з нього масив [1, 2, 3, 'a', 'b', 'c', 4, 5].
+let arrOne = [1, 2, 3, 4, 5];
+arrOne.splice(3,0, 'a','b','c');
+console.log(arrOne);
+
 //Task25: - Дан масив [1, 2, 3, 4, 5]. За допомогою методу/функції splice зробіть з нього масив [1, 'a', 'b', 2, 3, 4, 'c', 5, 'e'].
+let arrOne = [1, 2, 3, 4, 5];
+arrOne.splice(2,0, 'a','b');
+arrOne.splice(5,0, 'c');
+arrOne.splice(8,0, 'e');
+console.log(arrOne);
+
+
+
 //Task26: - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
 
 let arrOne = [2, 10, 7, 3, 5, 8, 6, 22, 96, 99];
 for (let i=0; i< arrOne.length; i++) {
-    if (arrOne[i] % 2 === 0) {
+    if (!(arrOne[i] % 2)) {
         console.log(arrOne[i]);
     }
 }
@@ -209,14 +261,16 @@ console.log(arrTwo);
 
 // Task28:- Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. За допомогою будь-якого циклу скопіювати значення одного масиву в інший.
 
-//???
 
-let arrOne = [2, 10, 7, 3, 5, 8, 6, 22, 96, 97];
+    let arrOne = [2, 10, 7, 3, 5, 8, 6, 22, 96, 97];
+    let arrTwo = [];
 
-for(let i=0; i < arrOne.length; i++) {
+    for(let i=0; i < arrOne.length; i++) {
 
-}
+        arrTwo.push(arrOne[i]);
 
+    }
+    console.log(arrTwo);
 
 
 //Task29: зробити масив з 10 чисел [2,17,13,6,22,31,45,66,100,-18]та:
@@ -309,5 +363,121 @@ console.log(arrOne);
 // 29.10
 //  створити пустий масив та :
 // - заповнити його 50 парними числами за допомоги циклу.
-let arr
+let arrOne = [];
+for (let i=2; i<=100; i+=2) {
+    arrOne.push(i);
+}
+
+console.log(arrOne);
+
 // - заповнити його 50 непарними числами за допомоги циклу.
+let arrOne = [];
+for (let i=1; i<=100; i+=2) {
+    arrOne.push(i);
+}
+
+console.log(arrOne);
+
+
+//Task30: створити пустий масив та:
+
+    let arrOne = [];
+// 30.1. заповнити його 50 парними числами за допомоги циклу.
+    for (let i=1; i<=50; i++) {
+        arrOne.push(i*2);
+    }
+
+    console.log(arrOne);
+
+
+// 30.2. заповнити його 50 непарними числами за допомоги циклу.
+let arrOne = [];
+for (let i=1; i<=100; i+=2) {
+    arrOne.push(i);
+}
+
+console.log(arrOne);
+
+// 30.3.1 используя Math.random заполнить массив из ???(сколько хотите) элементов.
+
+// for (let i=0; i<50; i++) {
+//     arrOne.push(Math.random())
+// }
+// console.log(arrOne);
+
+//     диапазон рандома 8 до 732. (но сначала пробуйте БЕЗ ДИАПАЗОНА!)
+for (let i=0; i<50; i++) {
+    arrOne.push(
+        Math.floor(Math.random()*732) + 8
+    )
+}
+console.log(arrOne);
+
+// 30.3.2 вывести на консоль  каждый третий елемент
+
+for (let i=2; i <arrOne.length; i+=3) {
+    console.log(arrOne[i]);
+}
+
+// 3. вывести на консоль  каждый третий елемент
+// но при условии что его значение является парным.
+for (let i=2; i <arrOne.length; i+=3) {
+    if (!(arrOne[i] % 2)) {
+        console.log(arrOne[i]);
+    }
+}
+// 4. вывести на консоль  каждый третий елемент
+// но при условии что он имеет парное значение и
+// записать их в другой массив.
+
+let arrTwo = [];
+for (let i=2; i <arrOne.length; i+=3) {
+    if (!(arrOne[i] % 2)) {
+        console.log(arrOne[i]);
+        arrTwo.push(arrOne[i])
+    }
+}
+console.log(arrTwo);
+// 5. Вывести каждый елемент массива у которого соседний с права элемент - парный
+for (let i=2; i <arrOne.length; i+=3) {
+    if (!(arrOne[i] % 2)) console.log(arrOne[i-1]);
+
+}
+// 5 масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. обрахувати середній чек.
+
+
+    let arrOne = [100,250,50,168,120,345,188];
+    let summ = 0;
+
+    for (let i = 0; i < arrOne.length; i++) {
+        summ += (arrOne[i]);
+    }
+    summ /= arrOne.length
+    console.log(summ);
+
+
+// 3 створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив.
+
+    let arrOne = [];
+    let arrTwo = [];
+    for (let i=0; i<10; i++) {
+        arrOne.push(
+            Math.floor(Math.random()*200) + 1
+        )
+        arrTwo.push(arrOne[i]*5);
+    }
+    console.log(arrOne);
+    console.log(arrTwo);
+
+// 4 створити масив з будь якими значеннями (стрінги, числа, і тд...). пройтись по ньому, і якщо об'єкт є числом,
+// додати його в інший масив.
+let arrOne = [4, 'Text', 8, false, 25, 'string', 64];
+let arrTwo = [];
+
+for (let i=0; i <arrOne.length; i++) {
+    if (typeof arrOne[i] ==='number') {
+        arrTwo.push(arrOne[i]);
+    }
+}
+console.log(arrOne);
+console.log(arrTwo);
