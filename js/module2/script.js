@@ -182,7 +182,10 @@ console.log(arrOne);
 
 let arrOne = ['1', '2', '3'];
 
-let arrTwo = [arrOne[2], arrOne[1], arrOne[0]];
+let arrTwo = [];
+    for (let i = 0; i < arrOne.length; i++) {
+        arrTwo.pop(arrOne[i]);
+    }
 console.log(arrOne);
 console.log(arrTwo);
 
