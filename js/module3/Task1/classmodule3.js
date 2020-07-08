@@ -98,3 +98,5 @@ let textTwoEl = document.getElementsByClassName('text2');
 for (let fieldTextTwo of textTwoEl) {
     fieldTextTwo.innerText = ('Other text in TextTwo Elements')
 }
+
+//Done!!

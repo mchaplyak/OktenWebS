@@ -196,7 +196,10 @@ rulesId.style.color = ('blue')
 console.log(rulesId.classList)
 
 const fcRulesElem = document.getElementsByClassName('fc_rules')
-console.log(fcRulesElem);
+
+for (let fieldFcRules of fcRulesElem) {
+    fieldFcRules.style.color = ('red');
+}
 
 // ====================
 // ====================

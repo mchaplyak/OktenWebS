@@ -352,12 +352,21 @@ let jsonGuitar = JSON.stringify(guitar);
 
 
 // - взять json из задания 11 и превратить их обратно в объекты.
+
+
 let parsedMan = JSON.parse(jsonMan);
 let parsedHouse = JSON.parse(jsonHouse);
 let parsedCar = JSON.parse(jsonCar);
 let parsedDog = JSON.parse(jsonDog);
 let parsedGuitar = JSON.parse(jsonGuitar);
+
+
 // - взять массив из задания 5,в цикле перебрать его объекты превратив их в json .
+
+for (let carsField of cars) {
+    JSON.stringify(carsField);
+    console.log(carsField);
+}
 
 // - взять массив из задания 6,в цикле перебрать его объекты превратив их в json .
 // - взять массив из задания 7,в цикле перебрать его объекты превратив их в json и сразу скоприовать в новый массив.
@@ -461,11 +470,24 @@ let parsedGuitar = JSON.parse(jsonGuitar);
 // ============
 // ====class===
 //     ============
-//
+//ClassTask1
 //     - є сторінка rules.html. Контентом сторінки є заголовки та параграфи. Заголовки (h2) характеризують тему контенту яка вказана в параграфі.
 //     створити скрипт, котрий зчитує всі заголовки, та робить в блоці з id=content з них список(ul>li), який буде змістом того, що знаходиться на сторінці.
 //     Скріпт повинен працювати навіть якщо кількість блоків з заголовком та параграфом зміниться.
-//
+
+let hTwoEl = document.getElementsByTagName('h2');
+let contentEl = document.getElementById('content')
+
+let ulElement = document.createElement('ul')
+
+console.log(ulElement);
+
+for (let hTwoField of hTwoEl ) {
+
+    console.log(hTwoField);
+
+}
+
 // -Є масив котрий характеризує правила. Створити скрипт який ітерує цей масив, та робить з кожне правило в окремому блоці.
 //     При цому в блоці, номер правила записати в свій блок, текст правила записати в свій окремий блок.
 //     Результатом відпрацювання скріпта повинна бути структура яка міститься в блоці wrap файла rule.html
