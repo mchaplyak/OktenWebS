@@ -610,7 +610,7 @@ console.log(iTag[0].innerText);
 
 
 // - за допомоги document.createElement та appendChild створити таблицю на 1 рядок з трьома ячейками всередені
-let tableEl = document.createElement('table ');
+let tableEl = document.createElement('table');
 let trEl = document.createElement('tr');
 let thEl = document.createElement('th');
 let thElTwo = document.createElement('th');
@@ -650,21 +650,15 @@ trEl.appendChild(thElThree)
 //     створити скрипт, котрий зчитує всі заголовки, та робить в блоці з id=content з них список(ul>li), який буде змістом того, що знаходиться на сторінці.
 //     Скріпт повинен працювати навіть якщо кількість блоків з заголовком та параграфом зміниться.
 //
-// let hTwo = document.getElementsByTagName('h2');
-//
-// let content = document.getElementById('content')
-//
-// let ulElement = document.createElement('ul')
-//
-// content.appendChild(ulElement)
-//
-//
-//
-// for (let i = 0; i < hTwo.length; i++) {
-//     let hTwoClone = hTwo[i].cloneNode(true);
-//     ulElement.appendChild(hTwoClone[i].innerText)
-//
-// }
+let hTwo = document.getElementsByTagName('h2');
+let content = document.getElementById('content')
+let ulElement = document.createElement('ul')
+content.appendChild(ulElement)
+
+for (const hTwoElement of hTwo) {
+    console.log(hTwoElement.innerText);
+}
+
 
 
 // -Є масив котрий характеризує правила. Створити скрипт який ітерує цей масив, та робить з кожне правило в окремому блоці.
