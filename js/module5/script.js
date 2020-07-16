@@ -50,48 +50,130 @@ function TagAttr(titleOfAttr, actionOfAttr) {
     //<a>
 let accessKey = new TagAttr(
     'accesskey',
-    'Активація посилання за доп. комбінації клавіш');
+    'Активація посилання за доп. комбінації клавіш'
+    );
 
 let coords = new TagAttr(
     'coords',
-    'Встановлює координати активної області');
+    'Встановлює координати активної області'
+    );
 
 let a = new Tag(
     '<a>',
     'Тег створює посилання',
     [accessKey,coords]
-    )
+    );
 
     //<div>
 
 let align = new TagAttr(
     'align',
     'Задає вирівнювання тегу',
-    )
+    );
 
 let titleAtt = new TagAttr(
     'title',
     'Добавляє вилітаючу підказку'
-    )
+    );
 
 let div = new Tag(
     '<div>',
     'Блочний елемент який виділяє фрагмент з ціллю змінни наповнення',
     [align, titleAtt]
-    )
+    );
 
 // h1
 
+let alignH1 = new TagAttr(
+    'align',
+    'Вирівнює заголовок'
+    );
+
+let h1Tag = new Tag(
+    '<h1>',
+    'Заголовок першого рівня',
+    [align, 'Також доступні універсальні атрибути']
+);
+
 // span
 
+let span = new Tag(
+    '<span>',
+    'Тег створений для визначення рядкових елементів документу',
+    ['Для цього тегу доступні універсальні атрибути']
+);
+
 // input
+let accept = new  TagAttr(
+    'accept',
+    'Встановлює фільтр для типів файлів, котрі можна відправити через поле завантаження'
+)
+
+let alt = new TagAttr(
+    'alt',
+    'Альтернативний текст доя кнопки з зображенням'
+);
+
+let input = new Tag(
+    '<input>',
+    'Один щ елементів форми, котрий дозволяє створювати різні елементи інтерфейсу',
+    [accept, alt]
+);
 
 // form
 
+let action = new TagAttr(
+    'action',
+    'Адреса документа, чи програми, котрий обробляє данні форми',
+);
+
+let nameAttr = new TagAttr(
+    'name',
+    'Імя форми',
+);
+
+let formATag = new Tag(
+    '<form>',
+    'Встановлює форму на веб сторінці',
+    [action, nameAttr]
+);
+
+
 // option
+
+let disabled = new TagAttr(
+    'disabled',
+    'Заблокувати для доступу елемент списку',
+);
+
+let label = new TagAttr(
+    'label',
+    'Вказівник мітки пункту списку'
+);
+
+let option = new Tag(
+    '<option>',
+    'Визначає окремі пункти списку, котри ствоює тег select',
+    [disabled, label]
+);
 
 // select
 
+let formAttr = new TagAttr(
+    'form',
+    'Звязує список з формою'
+);
+
+let sizeAttr = new TagAttr(
+    'size',
+    'Кількість рядків списку, зо відображаються'
+);
+
+let selectTag = new Tag(
+    '<select>',
+    'Тег дозволяє створювати елемент випадаючого списку',
+    [formAttr, sizeAttr]
+);
 
 
 //Task2:
@@ -163,15 +245,96 @@ let aClass = new TagClass(
 
 // h1
 
+let alignH1Class = new TagAttr(
+    'align',
+    'Вирівнює заголовок'
+);
+
+let h1TagClass = new Tag(
+    '<h1>',
+    'Заголовок першого рівня',
+    [alignH1Class, 'Також доступні універсальні атрибути']
+);
+
 // span
 
+let spanClass = new Tag(
+    '<span>',
+    'Тег створений для визначення рядкових елементів документу',
+    ['Для цього тегу доступні універсальні атрибути']
+);
+
 // input
+let acceptClass = new  TagAttr(
+    'accept',
+    'Встановлює фільтр для типів файлів, котрі можна відправити через поле завантаження'
+)
+
+let altClass = new TagAttr(
+    'alt',
+    'Альтернативний текст доя кнопки з зображенням'
+);
+
+let inputClass = new Tag(
+    '<input>',
+    'Один щ елементів форми, котрий дозволяє створювати різні елементи інтерфейсу',
+    [acceptClass, altClass]
+);
 
 // form
 
+let actionClass = new TagAttr(
+    'action',
+    'Адреса документа, чи програми, котрий обробляє данні форми',
+);
+
+let nameAttrClass = new TagAttr(
+    'name',
+    'Імя форми',
+);
+
+let formATagClass = new Tag(
+    '<form>',
+    'Встановлює форму на веб сторінці',
+    [actionClass, nameAttrClass]
+);
+
+
 // option
 
+let disabledClass = new TagAttr(
+    'disabled',
+    'Заблокувати для доступу елемент списку',
+);
+
+let labelClass = new TagAttr(
+    'label',
+    'Вказівник мітки пункту списку'
+);
+
+let optionClass = new Tag(
+    '<option>',
+    'Визначає окремі пункти списку, котри ствоює тег select',
+    [disabledClass, labelClass]
+);
+
 // select
+
+let formAttrClass = new TagAttr(
+    'form',
+    'Звязує список з формою'
+);
+
+let sizeAttrClass = new TagAttr(
+    'size',
+    'Кількість рядків списку, зо відображаються'
+);
+
+let selectTagClass = new Tag(
+    '<select>',
+    'Тег дозволяє створювати елемент випадаючого списку',
+    [formAttrClass, sizeAttrClass]
+);
 
 
 
@@ -352,3 +515,39 @@ for (const cinderella of cinderellas) {
 // --Сторити об'єкт типу "принц" за допомоги функції конструктора з полями ім'я, вік, туфелька яку він знайшов, та функцію "пошук попелюшки"
 // -- функція повинна приймати масив попелюшок, та шукає ту котра йому підходить
 // ==============================================
+
+
+function CinderellaS(nameS, ageS, sizeS) {
+    this.nameS = nameS;
+    this.ageS = ageS;
+    this.sizeS = sizeS;
+}
+
+let cinderellasS = [
+    lyuda = new CinderellaS('Lyuda', 28, 34),
+    olena = new CinderellaS('Olena', 24, 36),
+    vasylyna = new CinderellaS('Vasylyna', 20, 37),
+    viktoria = new CinderellaS('Viktoria', 25, 38),
+    roksa = new CinderellaS('Roksa', 18, 39),
+    maria = new CinderellaS('Maria', 28, 40),
+    adriana = new CinderellaS('Adriana', 29, 37),
+    dasha = new CinderellaS('Dasha', 19, 35),
+    marta = new CinderellaS('Marta', 24, 40),
+    lilia = new CinderellaS('Lilia', 30, 38),
+]
+
+let bohdan = {
+    name: 'Bohdan',
+    age: 19,
+    shoe: 35,
+    searchCinderella: function () {
+        for (const cinderella of cinderellasS) {
+            if (cinderella.ageS === bohdan.age && cinderella.sizeS === bohdan.shoe) {
+                document.write(`Принц ${bohdan.name} знайшов свою попелюшку - ${cinderella.nameS}`)
+            }
+        }
+
+    }
+}
+
+bohdan.searchCinderella()
