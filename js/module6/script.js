@@ -324,20 +324,41 @@ let usersWithAddress = [{id: 1, name: 'vasya', age: 31, status: false, address: 
 //
 // console.log(usersWithAddress);
 
+//Class20:
 // -- отсортировать его по номеру дома по возрастанию
 
-usersWithAddress.sort((a, b) => a.address.number - b.address.number)
+// usersWithAddress.sort((a, b) => a.address.number - b.address.number)
+//
+// console.log(usersWithAddress);
 
-console.log(usersWithAddress);
+//Task21:
 // -- отфильтровать (оставить) тех кто младше 30
 
+let usersThr = usersWithAddress.filter(value => value.age < 30);
 
+console.log(usersThr);
 
+//Task22:
 // -- отфильтровать (оставить) тех у кого отрицательный статус
+
+// let usersFalse = usersWithAddress.filter(value => value.status === false)
+//
+// console.log(usersFalse);
+
+//Task23:
 // -- отфильтровать (оставить) тех у кого отрицательный статус и младше 30 лет
+//
+// let usersFalseThr = usersWithAddress.filter(value => value.status === false && value.age < 30)
+//
+// console.log(usersFalseThr);
+
+//Task24:
 // -- отфильтровать (оставить) тех у кого номер дома четный
-//
-//
+
+let usersWithHouse = usersWithAddress.filter(value => {
+
+})
+
 // ===========================
 // ======ДОПОЛНИТЕЛЬНО========
 // ===========================
