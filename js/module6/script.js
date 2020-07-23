@@ -1,151 +1,135 @@
-// // - создать массив с 20 числами.
-// let arrOne = [25, 65, 44, 2, 54, 32, 100, 987, 23, 45]
-// console.log(arrOne);
-//
-// //Task1:
-// // -- при помощи метода sort и колбека  отсортировать массив.
-//
-// let sort = arrOne.sort ((a, b) => {
-//     return a - b;
-// });
-//
-// console.log(sort);
-//
-// //Task2:
-// // -- при помощи метода sort и колбека отсортировать массив в ниспадающем напралении.
-// let returnSort = arrOne.sort((a,b) => {
-//     return b - a;
-// });
-//
-// console.log(returnSort);
-//
-// //Task3:
-// // -- при помощи filter получить числа кратные 3
-// let filterOne = arrOne.filter(value => {
-//     return !(value % 3)
-// });
-//
-// console.log(filterOne);
-//
-// //Task4:
-// // -- при помощи filter получить числа кратные 10
-//
-// let filterTwo = arrOne.filter(value => {
-//     return !(value % 10)
-// });
-//
-// console.log(filterTwo);
-//
-// // Task5:
-// // -- перебрать (проитерировать) массив при помощи foreach()
-//
-// arrOne.forEach(value => {
-//     console.log(value);
-// });
-// // Task6:
-// // -- перебрать массив при помощи map() и получить новый массив в котором все значения будут в 3 раза больше
-//
-// let arrTwo = [];
-// arrOne.map(value => {
-//    return arrTwo.push(value * 3)
-// });
-//
-// console.log(arrTwo);
-//
-// // - создать массив со словами на 15-20 элементов.
-//
-// let arrString = ['go', 'construct', 'rock', 'confuse', 'pass', 'extraterrestrial', 'card', 'depend', 'tube', 'woman',
-//                  'glue', 'cold', 'model', 'burial', 'texture', 'cave', 'pool', 'illustrate', 'hang', 'lecture'];
-// console.log(arrString);
-// // Task8:
-// // -- отсортировать его по алфавиту в восходящем порядке.
-// let sortString = arrString.sort((a, b) => (a > b) ? 1 : -1)
-// console.log(sortString);
-//
-// //Task9:
-// // -- отсортировать его по алфавиту  в нисходящем порядке.
-// let sortStringReverse = arrString.sort((a, b) => (a > b) ? -1 : 1)
-//
-// console.log(sortStringReverse);
-//
-// //Task10:
-// // -- отфильтровать слова длиной менее 4х символов
-//
-// let arrStringFourCh = arrString.filter (value => value.length <= 4)
-//
-// console.log(arrStringFourCh);
-//
-// //Task11:
-// // -- перебрать массив при помощи map() и получить новый массив в котором все значения будут со знаком "!" в конце
-//
-// let newArrString = arrString.map(value => value+`!`)
-//
-// console.log(newArrString);
-//
-// // Все робити через функції масивів (foreach, map ...тд)
-// // Дан масив :
-//
-//     let users = [
-//     {name: 'vasya', age: 31, status: false},
-//     {name: 'petya', age: 30, status: true},
-//     {name: 'kolya', age: 29, status: true},
-//     {name: 'olya', age: 28, status: false},
-//     {name: 'max', age: 30, status: true},
-//     {name: 'anya', age: 31, status: false},
-//     {name: 'oleg', age: 28, status: false},
-//     {name: 'andrey', age: 29, status: true},
-//     {name: 'masha', age: 30, status: true},
-//     {name: 'olya', age: 31, status: false},
-//     {name: 'max', age: 31, status: true}
-//     ];
-//
-// //Task12:
-// // - відсортувати його за  віком (зростання , а потім окремо спадання)
-// users.sort((a, b) => {
-//     return a.age - b.age;
-// })
-//
-// console.log(users);
-//
-//
-// users.sort((a, b) => {
-//     return b.age - a.age;
-// })
-//
-// console.log(users);
-//
-// //Task13:
-// // - відсортувати його за кількістю знаків в імені  (зростання , а потім окремо спадання)
-//
-// users.sort((a, b) => {
-//     return a.name.length - b.name.length
-// })
-//
-// console.log(users);
-//
-//
-// users.sort((a, b) => {
-//     return b.name.length - a.name.length
-// })
-//
-// console.log(users);
+// - создать массив с 20 числами.
+let arrOne = [25, 65, 44, 2, 54, 32, 100, 987, 23, 45]
+console.log(arrOne);
 
-//Task14:
-// - пройтись по ньому та додати кожному юзеру поле id - яке характеризує унікальний індентифікатор (По якому принципу його створювати - ваше рішення), та зберегти це в новий масив (первинний масив залишиться без змін)
+//Task1:
+// -- при помощи метода sort и колбека  отсортировать массив.
+
+let sort = arrOne.sort ((a, b) => {
+    return a - b;
+});
+
+console.log(sort);
+
+//Task2:
+// -- при помощи метода sort и колбека отсортировать массив в ниспадающем напралении.
+let returnSort = arrOne.sort((a,b) => {
+    return b - a;
+});
+
+console.log(returnSort);
+
+//Task3:
+// -- при помощи filter получить числа кратные 3
+let filterOne = arrOne.filter(value => {
+    return !(value % 3)
+});
+
+console.log(filterOne);
+
+//Task4:
+// -- при помощи filter получить числа кратные 10
+
+let filterTwo = arrOne.filter(value => {
+    return !(value % 10)
+});
+
+console.log(filterTwo);
+
+// Task5:
+// -- перебрать (проитерировать) массив при помощи foreach()
+
+arrOne.forEach(value => {
+    console.log(value);
+});
+// Task6:
+// -- перебрать массив при помощи map() и получить новый массив в котором все значения будут в 3 раза больше
+
+let arrTwo = [];
+arrOne.map(value => {
+   return arrTwo.push(value * 3)
+});
+
+console.log(arrTwo);
+
+// - создать массив со словами на 15-20 элементов.
+
+let arrString = ['go', 'construct', 'rock', 'confuse', 'pass', 'extraterrestrial', 'card', 'depend', 'tube', 'woman',
+                 'glue', 'cold', 'model', 'burial', 'texture', 'cave', 'pool', 'illustrate', 'hang', 'lecture'];
+console.log(arrString);
+// Task8:
+// -- отсортировать его по алфавиту в восходящем порядке.
+let sortString = arrString.sort((a, b) => (a > b) ? 1 : -1)
+console.log(sortString);
+
+//Task9:
+// -- отсортировать его по алфавиту  в нисходящем порядке.
+let sortStringReverse = arrString.sort((a, b) => (a > b) ? -1 : 1)
+
+console.log(sortStringReverse);
+
+//Task10:
+// -- отфильтровать слова длиной менее 4х символов
+
+let arrStringFourCh = arrString.filter (value => value.length <= 4)
+
+console.log(arrStringFourCh);
+
+//Task11:
+// -- перебрать массив при помощи map() и получить новый массив в котором все значения будут со знаком "!" в конце
+
+let newArrString = arrString.map(value => value+`!`)
+
+console.log(newArrString);
+
+// Все робити через функції масивів (foreach, map ...тд)
+// Дан масив :
+
+    let users = [
+    {name: 'vasya', age: 31, status: false},
+    {name: 'petya', age: 30, status: true},
+    {name: 'kolya', age: 29, status: true},
+    {name: 'olya', age: 28, status: false},
+    {name: 'max', age: 30, status: true},
+    {name: 'anya', age: 31, status: false},
+    {name: 'oleg', age: 28, status: false},
+    {name: 'andrey', age: 29, status: true},
+    {name: 'masha', age: 30, status: true},
+    {name: 'olya', age: 31, status: false},
+    {name: 'max', age: 31, status: true}
+    ];
+
+//Task12:
+// - відсортувати його за  віком (зростання , а потім окремо спадання)
+users.sort((a, b) => {
+    return a.age - b.age;
+})
+
+console.log(users);
 
 
+users.sort((a, b) => {
+    return b.age - a.age;
+})
+
+console.log(users);
+
+//Task13:
+// - відсортувати його за кількістю знаків в імені  (зростання , а потім окремо спадання)
+
+users.sort((a, b) => {
+    return a.name.length - b.name.length
+})
+
+console.log(users);
 
 
+users.sort((a, b) => {
+    return b.name.length - a.name.length
+})
 
+console.log(users);
 
-//Task15:
-// - відсортувати його за індентифікатором
-
-//Task16:
-// -- наисать функцию калькулятора с 2мя числами и колбеком
-
-//Task17:
-// -- наисать функцию калькулятора с 3мя числами и колбеком
 //
 // =============================================
 // =============================================
@@ -172,86 +156,86 @@ let cars = [{producer:"subaru",model: "wrx",year: 2010, color:"blue",type: "seda
 // // Відфільтрувати масив за наступними крітеріями :
 
 //Class1:
-// //     - двигун більше 3х літрів
-// let arrCarsThree = cars.filter(value => value.volume >= 3);
-//
-// console.log(arrCarsThree);
-//
+//     - двигун більше 3х літрів
+let arrCarsThree = cars.filter(value => value.volume >= 3);
+
+console.log(arrCarsThree);
+
 
 //Class2:
-// // - двигун = 2л
+// - двигун = 2л
 //
-// let arrCarsTwo = cars.filter(value => value.volume === 2);
-//
-// console.log(arrCarsTwo);
+let arrCarsTwo = cars.filter(value => value.volume === 2);
+
+console.log(arrCarsTwo);
 
 //Class3:
-// // - виробник мерс
-//
-// let arrCarsMercedes = cars.filter(value => value.producer === 'mercedes');
-//
-// console.log(arrCarsMercedes);
+// - виробник мерс
+
+let arrCarsMercedes = cars.filter(value => value.producer === 'mercedes');
+
+console.log(arrCarsMercedes);
 
 
 //Class4:
 // - двигун більше 3х літрів + виробник мерседес
 
-// let arrCarsMercThree = cars.filter(value => value.volume >= 3 && value.producer === 'mercedes'  );
-//
-// console.log(arrCarsMercThree);
+let arrCarsMercThree = cars.filter(value => value.volume >= 3 && value.producer === 'mercedes'  );
+
+console.log(arrCarsMercThree);
 
 //Class5:
 // - двигун більше 3х літрів + виробник субару
 //
-// let arrCarsSubaruThree = cars.filter(value => value.volume >= 3 && value.producer === 'subaru')
-//
-// console.log(arrCarsSubaruThree);
+let arrCarsSubaruThree = cars.filter(value => value.volume >= 3 && value.producer === 'subaru')
+
+console.log(arrCarsSubaruThree);
 
 //Class6
 // - сили більше ніж 300
 
-// let arrCarsPowerThree = cars.filter(value => value.power === 300)
+let arrCarsPowerThree = cars.filter(value => value.power === 300)
 
 //Class7
 // - сили більше ніж 300 + виробник субару
-// let arrCarsSubaruThree = cars.filter(value => value.power === 300 && value.producer === 'subaru' );
-//
-// console.log(arrCarsSubaruThree);
+let arrCarsSubaruThree = cars.filter(value => value.power === 300 && value.producer === 'subaru' );
+
+console.log(arrCarsSubaruThree);
 
 //Class8:
 // - мотор серіі ej
 
-// let carsEngineEj = cars.filter(value => value.engine.startsWith('ej'));
-//
-// console.log(carsEngineEj);
+let carsEngineEj = cars.filter(value => value.engine.startsWith('ej'));
+
+console.log(carsEngineEj);
 
 //Class9:
 // - сили більше ніж 300 + виробник субару + мотор серіі ej
 
-// let carsPowerSubaruEj = cars.filter(value => value.power >= 300 && value.producer === 'subaru' && value.engine.startsWith('ej'))
-//
-// console.log(carsPowerSubaruEj);
+let carsPowerSubaruEj = cars.filter(value => value.power >= 300 && value.producer === 'subaru' && value.engine.startsWith('ej'))
+
+console.log(carsPowerSubaruEj);
 
 //Class10:
 // - двигун меньше 3х літрів + виробник мерседес
 
-// let carsThreeMerc = cars.filter(value => value.volume < 3 && value.producer === 'mercedes' );
-//
-// console.log(carsThreeMerc);
+let carsThreeMerc = cars.filter(value => value.volume < 3 && value.producer === 'mercedes' );
+
+console.log(carsThreeMerc);
 
 //Class11:
 // - двигун більше 2л + сили більше 250
 
-// let carsEnginePowerTwo = cars.filter(value => value.volume >= 2 && value.power >= 250);
-//
-// console.log(carsEnginePowerTwo);
+let carsEnginePowerTwo = cars.filter(value => value.volume >= 2 && value.power >= 250);
+
+console.log(carsEnginePowerTwo);
 
 //Class12:
 // - сили більше 250  + виробник бмв
 
-// let carsPowerBmw = cars.filter(value => value.producer === 'bmw' && value.power >= 250);
-//
-// console.log(carsPowerBmw);
+let carsPowerBmw = cars.filter(value => value.producer === 'bmw' && value.power >= 250);
+
+console.log(carsPowerBmw);
 
 
 // - взять слдующий массив
@@ -270,119 +254,92 @@ let usersWithAddress = [{id: 1, name: 'vasya', age: 31, status: false, address: 
 //Class13:
 // -- отсортировать его по id пользователей
 
-// usersWithAddress.sort((a, b) => {
-//     return a.id - b.id
-// })
-//
-// console.log(usersWithAddress);
+usersWithAddress.sort((a, b) => {
+    return a.id - b.id
+})
+
+console.log(usersWithAddress);
 
 //Class14:
 // -- отсортировать его по id пользователей в обратном опрядке
 
-// usersWithAddress.sort((a, b) => {
-//     return b.id - a.id
-// })
-//
-// console.log(usersWithAddress);
+usersWithAddress.sort((a, b) => {
+    return b.id - a.id
+})
+
+console.log(usersWithAddress);
 
 //Class15:
 // -- отсортировать его по возрасту пользователей
 
-// usersWithAddress.sort((a, b) => {
-//     return a.age - b.age
-// })
-//
-// console.log(usersWithAddress);
+usersWithAddress.sort((a, b) => {
+    return a.age - b.age
+})
+
+console.log(usersWithAddress);
 
 //Class16:
 // -- отсортировать его по возрасту пользователей в обратном порядке
-//
-// usersWithAddress.sort((a, b) => {
-//     return b.age - a.age
-// })
-//
-// console.log(usersWithAddress);
+
+usersWithAddress.sort((a, b) => {
+    return b.age - a.age
+})
+
+console.log(usersWithAddress);
 
 //Class17:
 // -- отсортировать его по имени пользователей
 
-// usersWithAddress.sort((a, b) => (a.name > b.name) ? 1 : -1)
-//
-// console.log(usersWithAddress);
+usersWithAddress.sort((a, b) => (a.name > b.name) ? 1 : -1)
+
+console.log(usersWithAddress);
 
 //Class18:
 // -- отсортировать его по имени пользователей в обратном порядке
 
-// usersWithAddress.sort((a, b) => (a.name > b.name) ? -1 : 1);
-//
-// console.log(usersWithAddress);
+usersWithAddress.sort((a, b) => (a.name > b.name) ? -1 : 1);
+
+console.log(usersWithAddress);
 
 //Class19:
 // -- отсортировать его по названию улицы  в алфавитном порядке
 
-// usersWithAddress.sort((a, b) => (a.address.street > b.address.street) ? 1 : -1 )
-//
-// console.log(usersWithAddress);
+usersWithAddress.sort((a, b) => (a.address.street > b.address.street) ? 1 : -1 )
+
+console.log(usersWithAddress);
 
 //Class20:
 // -- отсортировать его по номеру дома по возрастанию
 
-// usersWithAddress.sort((a, b) => a.address.number - b.address.number)
-//
-// console.log(usersWithAddress);
+usersWithAddress.sort((a, b) => a.address.number - b.address.number)
 
-//Task21:
+console.log(usersWithAddress);
+
+//Class21:
 // -- отфильтровать (оставить) тех кто младше 30
 
 let usersThr = usersWithAddress.filter(value => value.age < 30);
 
 console.log(usersThr);
 
-//Task22:
+//Class22:
 // -- отфильтровать (оставить) тех у кого отрицательный статус
 
-// let usersFalse = usersWithAddress.filter(value => value.status === false)
-//
-// console.log(usersFalse);
+let usersFalse = usersWithAddress.filter(value => value.status === false)
 
-//Task23:
+console.log(usersFalse);
+
+//Class23:
 // -- отфильтровать (оставить) тех у кого отрицательный статус и младше 30 лет
 //
-// let usersFalseThr = usersWithAddress.filter(value => value.status === false && value.age < 30)
-//
-// console.log(usersFalseThr);
+let usersFalseThr = usersWithAddress.filter(value => value.status === false && value.age < 30)
 
-//Task24:
+console.log(usersFalseThr);
+
+//Class24:
 // -- отфильтровать (оставить) тех у кого номер дома четный
 
-let usersWithHouse = usersWithAddress.filter(value => {
+let usersWithHouse = usersWithAddress.filter(value => !(value.address.number % 2))
 
-})
+console.log(usersWithHouse);
 
-// ===========================
-// ======ДОПОЛНИТЕЛЬНО========
-// ===========================
-//
-// Створити обєкт автомобіля з полями:
-//     Марка автомобля, потужність двигуна, власник, ціна, рік випуску.
-//     Власник автомобіля теж має бути обєкт, у якого є поля
-// Імя, вік, стаж водіння.
-//     Створити не менше 7 та не більше 20 машинок.
-//     Зробили половину автопарку ремонт мотору, що збільшить потужність автомобілів на 10% (переприсвоєння змінної потужності).
-// На відремонтовані автомобілі найняти нових водіїв (переприсвоїти змінну водій).
-// Для початку вкладіть всі наші створені автомобілі в масив cars.
-//     Далі необхідно рати кожну другу машинку (цикл з кроком в 2), та робити їй підвищення потужності двигуна на 10% та ціну на 5%
-// Після того зробити перевірку досвіду ВСІХ наших водіїв. Якщо досвід водія менший за 5 років, але його вік більший за 25, то необідно відправити його на курси підвищення кваліфікації, що збільшить йому досвід на 1 рік.
-//     Також спробуйте порахувати суму, яку потрібно потратити для покупки всіх цих авто в циклі
-//
-//
-// Задача: дан отсортированный по возрастанию массив целых чисел. Необходимо вернуть наименьший и наибольший индекс заданного элемента.
-//     Входные данные: arr — массив целых чисел значения которых по модулю не больше 10. Размер массива не более 10 элементов.
-//     Вывод: наибольший и наименьший индекс в массиве заданного элемента. Если такого элемента нет в массиве, выведите -1.
-//
-// Пример:
-//     Arr = [1, 2, 3, 4, 4, 4, 4, 7, 7, 9, 14]
-// 1. Key = 1
-// Answer: MinIndex = 0, MaxIndex = 0.
-// 2. Key = 4
-// Answer: MinIndex = 3, MaxIndex = 6.
