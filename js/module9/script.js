@@ -6,7 +6,7 @@ function wakeUp(isEyesOpen, cb) {
         myTime = myTime + 720;
         cb(null, myTime);
         } else {
-            cb('ZzZzZzZz', null)
+            cb('ZzZzZzZz', null);
         }
     }, 1000)
 }
@@ -57,13 +57,13 @@ function goWear (myTime, clotheClear, cb) {
             console.error('Ти запізнився!!');
             cb('Немає часу!', null);
         }
-    }, 700)
+    }, 700);
 }
 
 function goWork (myTime, transport, cb) {
     setTimeout(() => {
         if (myTime > 20 && transport) {
-            console.log('Їдемо...')
+            console.log('Їдемо...');
             myTime = myTime - 20;
             cb (null, myTime);
         } else if (!(transport)) {
@@ -73,14 +73,14 @@ function goWork (myTime, transport, cb) {
             console.error('Ти запізнився!');
             cb('Немає часу!', null);
         }
-    }, 50)
+    }, 50);
 }
 
 
 function working(myTime, internet, cb) {
     setTimeout(() => {
         if (myTime > 480 && internet) {
-            console.log('Працюємо...')
+            console.log('Працюємо...');
             myTime = myTime - 480;
             cb (null, myTime);
         } else if (!(internet)) {
@@ -90,13 +90,13 @@ function working(myTime, internet, cb) {
             console.error('Ти запізнився!');
             cb('Немає часу!', null);
         }
-    }, 320)
+    }, 320);
 }
 
 function goHome (myTime, projectDone, cb) {
     setTimeout(() => {
         if (myTime && projectDone) {
-            console.log('Їдемо додому...')
+            console.log('Їдемо додому...');
             myTime = myTime - 25;
             cb (null, myTime);
         } else if (!(projectDone)) {
@@ -106,56 +106,58 @@ function goHome (myTime, projectDone, cb) {
             console.error('Тебе звільнили');
             cb('Немає часу!', null);
         }
-    }, 10)
+    }, 10);
 }
 
 wakeUp(true, (err, myTime) => {
     if (err) {
-        document.write(`<h3>Спокійного сну...</h3>`)
+        document.write(`<h3>Спокійного сну...</h3>`);
     } else {
-        document.write('<h3>Доброго ранку!</h3>')
+        document.write('<h3>Доброго ранку!</h3>');
         goShower(myTime, true, (errTwo) => {
             if (errTwo) {
-                document.write(`<h3>Ти запізнився!</h3>`)
+                document.write(`<h3>Ти запізнився!</h3>`);
             } else {
-                document.write(`<h3>Тепер ти чистий!</h3>`)
+                document.write(`<h3>Тепер ти чистий!</h3>`);
                 goEat(myTime, true, (errThree) => {
                     if (errThree) {
-                        document.write(`<h3>Ти запізнився!</h3>`)
+                        document.write(`<h3>Ти запізнився!</h3>`);
                     } else {
-                        document.write(`<h3>Смачного сніданку!</h3>`)
+                        document.write(`<h3>Смачного сніданку!</h3>`);
                         goWear(myTime, true, (errFour) =>{
                             if (errFour) {
-                                document.write(`<h3>Ти запізнився!</h3>`)
+                                document.write(`<h3>Ти запізнився!</h3>`);
                             } else {
-                                document.write(`<h3>Ти одягнувся, пора на роботу!</h3>`)
+                                document.write(`<h3>Ти одягнувся, пора на роботу!</h3>`);
                                 goWork(myTime, true, (errFive) => {
                                     if (errFive) {
-                                        document.write(`<h3>Ти запізнився на роюоту, тебе звільнили!</h3>`)
+                                        document.write(`<h3>Ти запізнився на роюоту, тебе звільнили!</h3>`);
                                     } else {
-                                        document.write(`<h3>Ти на роботі, працюй!</h3>`)
+                                        document.write(`<h3>Ти на роботі, працюй!</h3>`);
                                         working(myTime, true, (errSix) => {
                                             if (errSix) {
-                                                document.write(`<h3>Проект не зданий, тебе звільнили!</h3>`)
+                                                document.write(`<h3>Проект не зданий, тебе звільнили!</h3>`);
                                             } else {
-                                                document.write(`<h3>Гарно попрацював, пора до дому!</h3>`)
+                                                document.write(`<h3>Гарно попрацював, пора до дому!</h3>`);
                                                 goHome(myTime, true, (errSeven) => {
                                                     if (errSeven) {
-                                                        document.write(`<h3>Тебе звільнили, проект не зданий!</h3>`)
+                                                        document.write(`<h3>Тебе звільнили, проект не зданий!</h3>`);
                                                     } else {
-                                                        document.write(`<h2>Ти вдома, відпочивай!</h2>`)
+                                                        document.write(`<h2>Ти вдома, відпочивай!</h2>`);
                                                     }
-                                                })
+                                                });
                                             }
-                                        })
+                                        });
                                     }
-                                })
+                                });
                             }
-                        })
+                        });
                     }
-                })
+                });
             }
-        })
+        });
     }
-})
+});
+
+
 
