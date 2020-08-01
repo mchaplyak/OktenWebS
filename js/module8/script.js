@@ -90,7 +90,7 @@ testText.value = localStorage.getItem('textArea')
 //
 //
 
-let usersBlock = document.getElementById('users')
+
 const users = [{
     name: 'Max',
     phone: 11111
@@ -105,13 +105,14 @@ const users = [{
     }];
 
 
-localStorage.setItem('users', JSON.stringify(users));
+// localStorage.setItem('users', JSON.stringify(users));
+
+const usersBlock = document.getElementById('users')
 
 const nameTwo = document.getElementById('nameTwo');
 const phoneTwo = document.getElementById('phoneTwo');
 const save = document.getElementById('saveBtn');
 
-const divUser = document.createElement('div');
 const editForm = document.getElementById('edit')
 const nameEd = document.getElementById('nameEdit');
 const phoneEd = document.getElementById('phoneEdit');
@@ -124,6 +125,8 @@ save.onclick = () => {
     const  phone = phoneTwo.value;
 
     users.push({name, phone})
+    localStorage.setItem('users', JSON.stringify(users))
+
     newUser()
 }
 
@@ -134,6 +137,7 @@ function newUser() {
     const users = JSON.parse(item)
 
     users.forEach(({name, phone}, id) => {
+        const divUser = document.createElement('div');
         const divBtn = document.createElement('div');
         const editBtn = document.createElement('button');
         const removeBtn = document.createElement('button');
@@ -164,11 +168,11 @@ function newUser() {
     })
 }
 
-function edit({name, phone}, id) {
+function edit(user, id) {
     editForm.style.display = 'block';
 
-    nameEd.value = name;
-    phoneEd.value = phone;
+    nameEd.value = user.name;
+    phoneEd.value = user.phone;
 
     saveEd.onclick = () => {
         users[id].name = nameEd.value;
