@@ -439,7 +439,7 @@ async function myDay() {
     try {
         let time = await wakeUp(true);
         let timeTwo = await goShower(time,true);
-        let timeThree = await goEat(time,false);
+        let timeThree = await goEat(time,true);
         let timeFour = await goWear(time,true);
         let timeFive = await goWork(time,true);
         let timeSix = await working(time,true);
