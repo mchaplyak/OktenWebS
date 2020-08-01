@@ -132,7 +132,7 @@
 //                                 document.write(`<h3>Ти одягнувся, пора на роботу!</h3>`);
 //                                 goWork(myTime, true, (errFive) => {
 //                                     if (errFive) {
-//                                         document.write(`<h3>Ти запізнився на роюоту, тебе звільнили!</h3>`);
+//                                         document.write(`<h3>Ти запізнився на роботу, тебе звільнили!</h3>`);
 //                                     } else {
 //                                         document.write(`<h3>Ти на роботі, працюй!</h3>`);
 //                                         working(myTime, true, (errSix) => {
@@ -163,6 +163,159 @@
 
 
 //Task2:
+// let myTime = 0;
+//
+// function wakeUp(isEyesOpen) {
+//     return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         if (isEyesOpen) {
+//             myTime = myTime + 720;
+//             resolve(myTime);
+//         } else {
+//             reject('ZzZzZzZz');
+//         }
+//     }, 1000)
+//     })}
+//
+//
+// function goShower(myTime, water) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//         if (myTime > 10 && water) {
+//             console.log('Миюсь...');
+//             myTime = myTime - 10;
+//             resolve ( myTime);
+//         } else if (!(water)){
+//             console.error('Немає води, біда!');
+//             reject('Немає часу!');
+//         } else {
+//             console.error('Ти запізнився!');
+//             reject('Немає часу!');
+//         }
+//     }, 500)
+//     })}
+//
+//
+// function goEat (myTime, food) {
+//     return new Promise((resolve, reject) => {
+//             setTimeout(()=> {
+//         if (myTime > 30 && food) {
+//             console.log('Їм...');
+//             myTime = myTime - 30;
+//             resolve (myTime);
+//         } else if (!(food)) {
+//             console.error('Нема що їсти!');
+//             reject ('Немає часу!', null);
+//         } else {
+//             console.error('Ти запізнився!');
+//             reject('Немає часу!');
+//         }
+//     }, 100)
+//     })}
+//
+// function goWear (myTime, clotheClear) {
+//     return new Promise ((resolve, reject) => {
+//         setTimeout(()=> {
+//         if (myTime > 15 && clotheClear) {
+//             console.log('Одягаюсь...');
+//             myTime = myTime - 15;
+//             resolve (myTime);
+//         } else if (!(clotheClear)) {
+//             console.error('Попери одяг!!');
+//             reject ('Немає часу!', null);
+//         } else  {
+//             console.error('Ти запізнився!!');
+//             reject('Немає часу!', null);
+//         }
+//     }, 700);
+//     })}
+//
+// function goWork (myTime, transport) {
+//     return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         if (myTime > 20 && transport) {
+//             console.log('Їдемо...');
+//             myTime = myTime - 20;
+//             resolve (myTime);
+//         } else if (!(transport)) {
+//             console.error('Немає маршрутки, ти запізнився!');
+//             reject('Немає часу!');
+//         } else  {
+//             console.error('Ти запізнився!');
+//             reject('Немає часу!');
+//         }
+//     }, 50);
+// })}
+//
+//
+// function working(myTime, internet) {
+//     return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         if (myTime > 480 && internet) {
+//             console.log('Працюємо...');
+//             myTime = myTime - 480;
+//             resolve (myTime);
+//         } else if (!(internet)) {
+//             console.error('Немає Інтернету, проект не зданий!');
+//             reject('Немає часу!');
+//         } else  {
+//             console.error('Ти запізнився!');
+//             reject('Немає часу!');
+//         }
+//     }, 320);
+// })}
+//
+// function goHome (myTime, projectDone) {
+//     return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         if (myTime && projectDone) {
+//             console.log('Їдемо додому...');
+//             myTime = myTime - 25;
+//             resolve (myTime);
+//         } else if (!(projectDone)) {
+//             console.error('Проект не закінченний, тебе звільнили!');
+//             reject('Немає часу!');
+//         } else {
+//             console.error('Тебе звільнили');
+//             reject('Немає часу!');
+//         }
+//     }, 10);
+// })}
+//
+// wakeUp(true)
+//     .then(time => {
+//         document.write('<h3>Доброго ранку!</h3>');
+//         return goShower(time, true);
+//     })
+//     .then(time => {
+//         document.write(`<h3>Тепер ти чистий!</h3>`);
+//         return  goEat(time, true);
+//     })
+//     .then(time => {
+//         document.write(`<h3>Смачного сніданку!</h3>`);
+//         return goWear(time, true);
+//     })
+//     .then(time => {
+//         document.write(`<h3>Ти одягнувся, пора на роботу!</h3>`);
+//         return goWork(time, true);
+//     })
+//     .then(time => {
+//         document.write(`<h3>Ти на роботі, працюй!</h3>`);
+//         return working(time, true);
+//     })
+//     .then(time => {
+//         document.write(`<h3>Гарно попрацював, пора до дому!</h3>`);
+//         return goHome(time, true);
+//     })
+//     .then(time => {
+//         document.write(`<h2>Ти вдома, відпочивай!</h2>`);
+//         return(time)
+//     })
+//     .catch(reason => {
+//         console.error(reason)
+//     })
+
+//Task3:
 let myTime = 0;
 
 function wakeUp(isEyesOpen) {
@@ -254,29 +407,45 @@ function working(myTime, internet) {
         if (myTime > 480 && internet) {
             console.log('Працюємо...');
             myTime = myTime - 480;
-            resolve (null, myTime);
+            resolve (myTime);
         } else if (!(internet)) {
             console.error('Немає Інтернету, проект не зданий!');
-            reject('Немає часу!', null);
+            reject('Немає часу!');
         } else  {
             console.error('Ти запізнився!');
-            reject('Немає часу!', null);
+            reject('Немає часу!');
         }
     }, 320);
 })}
 
-function goHome (myTime, projectDone, cb) {
+function goHome (myTime, projectDone) {
+    return new Promise((resolve, reject) => {
     setTimeout(() => {
         if (myTime && projectDone) {
             console.log('Їдемо додому...');
             myTime = myTime - 25;
-            cb (null, myTime);
+            resolve (myTime);
         } else if (!(projectDone)) {
             console.error('Проект не закінченний, тебе звільнили!');
-            cb('Немає часу!', null);
+            reject('Немає часу!');
         } else {
             console.error('Тебе звільнили');
-            cb('Немає часу!', null);
+            reject('Немає часу!');
         }
     }, 10);
+})}
+
+async function myDay() {
+    try {
+        let time = await wakeUp(true);
+        let timeTwo = await goShower(time,true);
+        let timeThree = await goEat(time,false);
+        let timeFour = await goWear(time,true);
+        let timeFive = await goWork(time,true);
+        let timeSix = await working(time,true);
+        let timeSeven = await goHome(time,true);
+    } catch (e) {
+        console.error(e)
+    }
 }
+myDay();
