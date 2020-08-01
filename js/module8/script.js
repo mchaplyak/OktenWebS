@@ -2,13 +2,13 @@
 //     В неё вводится текст.
 //     Сделайте так, чтобы после захода на эту страницу через некоторое время, введенный текст остался в textarea.
 
-let testText = document.getElementById("contentArea");
-
-testText.oninput = (event) => {
-    localStorage.setItem('textArea', event.target.value);
-}
-
-testText.value = localStorage.getItem('textArea')
+// let testText = document.getElementById("contentArea");
+//
+// testText.oninput = (event) => {
+//     localStorage.setItem('textArea', event.target.value);
+// }
+//
+// testText.value = localStorage.getItem('textArea')
 
 // - Дана форма с инпутами, текстареа, чекбоксами, радио кнопочками, селектами и тп.
 //     Пользователь вводит какие-то данные и закрывает страницу (не факт, что он заполнил всю форму).
