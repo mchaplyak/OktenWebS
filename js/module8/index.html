@@ -14,15 +14,25 @@
 </label>
 
 
-<form action="" name="firstForm">
+<form action="" name="firstForm" id="firstForm" oninput="saveData(this)">
     <input type="text" name="name" id="name"> enter Name
     <input type="text" name="age" id="age"> enter age
-    <input type="radio" name="sex" > male
-    <input type="radio" name="sex"> female
-    <input type="checkbox" name="check"> One
-    <input type="checkbox" name="check"> Two
-    <input type="checkbox" name="check"> Three
+    <input type="radio" name="sex" value="false" id="radio1"> male
+    <input type="radio" name="sex" value="false" id="radio2"> female
+    <input type="checkbox" name="check" id="check1"> One
+    <input type="checkbox" name="check" id="check2"> Two
+    <input type="checkbox" name="check" id="check3"> Three
 </form>
+<hr>
+
+<div>
+    <input type="button" id="left" value="<---">
+    <input type="button" id="right" value="--->">
+</div>
+
+<textarea name="text" id="text" cols="30" rows="10"></textarea> <br>
+<input type="button" id="save" value="save">
+
 
 <script src="script.js"></script>
 </body>

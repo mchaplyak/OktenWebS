@@ -15,29 +15,45 @@ testText.value = localStorage.getItem('textArea')
 // Сделайте так, чтобы при следующем заходе на страницу введенные им ранее данные стояли на своих местах.
 //     Сделайте ваш скрипт как можно более универсальным.
 
-let myForm = document.forms.firstForm;
-
-let inputName = document.getElementById('name');
-let inputAge = document.getElementById('age');
-let radio = document.getElementsByName('sex');
-let check = document.getElementsByName('check')
-
-inputName.oninput = (event) => {
-    localStorage.setItem("name", event.target.value)
+let myForm = document.getElementById('firstForm')
+getDataStorage(myForm)
+function saveData(data) {
+saveDataStorage(data)
 }
-inputName.value = localStorage.getItem('name')
 
-inputAge.oninput = (event) => {
-    localStorage.setItem("age", event.target.value)
+function saveDataStorage (d) {
+    for (let i = 0; i < d.length; i++) {
+        const dEl = d[i];
+        if (dEl.type === 'checkbox' || dEl.type === 'radio')
+            dEl.checked ? dEl.value = true : dEl.value = false;
+
+       localStorage.setItem(dEl.id, dEl.value);
+    }
 }
-inputAge.value = localStorage.getItem('age')
 
+function getDataStorage(g) {
+    for (let i = 0; i < localStorage.length; i++) {
+        if (localStorage.hasOwnProperty(g.children[i].id)) {
+            g.children[i].value = localStorage.getItem(g.children[i].id)
+            if (g.children[i].value === 'true') {
+                g.children[i].setAttribute('checked', 'checked');
+            }
+        }
+    }
+}
 
 
 // -Дан текстареа. В него можно ввести данные, нажать кнопку "сохранить" и они "фикисруются" (в хранилище), затем поредактировать их, затем еще поредактировать и возможно еще.....
 // Требование : хранить историю своих изменений (даже после перезагрузки страницы).
 // Сверху над текстареа должны появится стрелочки, с помощью которых можно перемещаться по истории (не забудьте!чекпоинт истории - нажатеи кнопки сохранить).
-//
+
+const leftBtn = document.getElementById('left');
+const rightBtn = document.getElementById('right');
+const textAr = document.getElementById('text');
+const saveBtn = document.getElementById('save');
+
+
+
 // - Реализуйте записную книгу, хранящую данные в локальном хранилище.
 //     Данные которые надо сохранять : ФИО, номер, почта, фирма, отдел, день рождения
 // Данные вводить через соответсвующую форму.
