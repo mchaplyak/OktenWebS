@@ -5,6 +5,7 @@ function userCard(number) {
         historyLogs: [],
         key: number
     }
+
     let date = new Date().toLocaleDateString();
     let time = new Date().toLocaleTimeString();
 
@@ -47,7 +48,6 @@ function userCard(number) {
         takeCredits(money)
         if (cardOptions.transactionLimit >= money && cardOptions.balance >= money) {
             return cardName.putCredits(money - (money * (0.5/100))); // Беремо відсоток від суми переказу (можливо можна простіше?)
-
         } else {
             console.error('No Money!!')
         }
@@ -81,6 +81,8 @@ class UserAccount {
         }
     }
 }
+
+
 
 let max = new UserAccount('Max');
 
