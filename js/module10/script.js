@@ -53,8 +53,6 @@ function userCard(number) {
         }
     }
 
-
-
     return {
         getCardOptions,
         putCredits,
@@ -90,15 +88,11 @@ max.addCards('Monobank')
 max.addCards('PrivatBank')
 max.addCards('OschadBank')
 
-
-
-
 console.log(max);
 
 let card1 = max.getCardByKey(1);
 let card2 = max.getCardByKey(2);
 let card3 = max.getCardByKey(3);
-
 
 card1.putCredits(5000);
 card1.setTransactionLimit(5000);
