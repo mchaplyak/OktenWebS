@@ -1,6 +1,7 @@
 function userCard(number) {
+
     let cardOptions = {
-        balance: 100.0,
+        balance: 100,
         transactionLimit: 100,
         historyLogs: [],
         key: number
@@ -86,9 +87,9 @@ class UserAccount {
 
 let max = new UserAccount('Max');
 
-max.addCards('Monobank')
-max.addCards('PrivatBank')
-max.addCards('OschadBank')
+max.addCards('Monobank');
+max.addCards('PrivatBank');
+max.addCards('OschadBank');
 
 console.log(max);
 
