@@ -2,17 +2,26 @@
 // Клас людина:
 //     поля:
 //         вага,зріст
-
-class Human {
-    weight: number;
-    height: number;
-
-    constructor(weight: number, height: number) {
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var Human = /** @class */ (function () {
+    function Human(weight, height) {
         this.height = height;
         this.weight = weight;
     }
-}
-
+    return Human;
+}());
 // Клас депутат(наслідується від людини):
 // поля:
 //     прізвище,ім'я,вік,хабарник?,розмі хабаря
@@ -21,42 +30,39 @@ class Human {
 // якщо депутат не хабарник то щоб він відмовився,
 //     або ж якщо сума хабаря надто велика то щоб він вагався
 // чи брати чи ні)
-
-class Deputat extends Human {
-    lastName: string;
-    firstName: string;
-    age: number;
-    habarnyk?: boolean;
-    rozmirHabarya: number;
-
-    constructor(weight: number, height: number, lastName: string, firstName: string, age: number, rozmirHabarya: number,
-                habarnyk?: boolean) {
-        super(weight, height);
-        this.weight = weight;
-        this.height = height;
-        this.lastName = lastName;
-        this.firstName = firstName;
-        this.age = age;
-        this.habarnyk = habarnyk;
-        this.rozmirHabarya = rozmirHabarya;
+var Deputat = /** @class */ (function (_super) {
+    __extends(Deputat, _super);
+    function Deputat(weight, height, lastName, firstName, age, rozmirHabarya, habarnyk) {
+        var _this = _super.call(this, weight, height) || this;
+        _this.weight = weight;
+        _this.height = height;
+        _this.lastName = lastName;
+        _this.firstName = firstName;
+        _this.age = age;
+        _this.habarnyk = habarnyk;
+        _this.rozmirHabarya = rozmirHabarya;
+        return _this;
     }
-
-    datyHabar(suma) {
+    Deputat.prototype.datyHabar = function (suma) {
         if (this.habarnyk === true) {
             this.rozmirHabarya += suma;
-           return console.log('Всьо організуємо!')
-        } else {
+            return console.log('Всьо організуємо!');
+        }
+        else {
             if (suma < 500000) {
-                return console.log('Ти що собі дозволяєш!')
-            } else {
-                return console.log('Я подумаю...')
+                return console.log('Ти що собі дозволяєш!');
+            }
+            else {
+                return console.log('Я подумаю...');
             }
         }
-    }
-
-}
-
-
+    };
+    return Deputat;
+}(Human));
+var morozMaxym = new Deputat(78, 178, 'Moroz', 'Maxym', 33, 0, false);
+console.log(morozMaxym.rozmirHabarya);
+morozMaxym.datyHabar(20000000);
+console.log(morozMaxym.rozmirHabarya);
 // Клас фракція
 // поля:
 //     список депутатів
@@ -68,17 +74,6 @@ class Deputat extends Human {
 // вивести всіх депутатів
 // видалити всіх депутатів
 // вивести загальну суму хабарів для фракції
-
-class Frakciya {
-    spysokDeputativ: string[];
-
-    constructor(spysokDeputativ: string[]) {
-        this.spysokDeputativ = spysokDeputativ;
-    }
-
-
-}
-
 // клас Верховна рада
 // поля:
 //     мапа фракцій
