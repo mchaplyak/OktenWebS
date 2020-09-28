@@ -8,22 +8,32 @@ import { UserComponent } from './components/user/user.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {RouterModule} from "@angular/router";
 import { UserDetailsComponent } from './components/user-details/user-details.component';
+import { AllPostComponent } from './components/all-post/all-post.component';
+import { PostComponent } from './components/post/post.component';
+import { PostViewComponent } from './components/post-view/post-view.component';
+import { AllCommentComponent } from './components/all-comment/all-comment.component';
+import { CommentComponent } from './components/comment/comment.component';
+import { CommentViewComponent } from './components/comment-view/comment-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AllUserComponent,
     UserComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    AllPostComponent,
+    PostComponent,
+    PostViewComponent,
+    AllCommentComponent,
+    CommentComponent,
+    CommentViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     RouterModule.forRoot([
-      {path: 'user', component: AllUserComponent, children: [
-          {path: 'details/:id', component: UserDetailsComponent}
-        ]}
+
     ])
   ],
   providers: [],
