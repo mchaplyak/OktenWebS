@@ -1,0 +1,6 @@
+PostId: {{post.id}}<br>
+PostUserId: {{post.userId}}<br>
+PostTitle: {{post.title}}<br>
+
+<button [routerLink]="['view', post.id]" [state]="{xxx: post}">ViewPost</button>
+<hr>
