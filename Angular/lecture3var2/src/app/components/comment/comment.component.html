@@ -1,0 +1,6 @@
+CommentId: {{comment.id}}<br>
+CommentPostId: {{comment.postId}}<br>
+CommentName: {{comment.name}}<br>
+
+<button [routerLink]="['view', comment.id]" [state]="{xxx: comment}">ViewComment</button>
+<hr>
