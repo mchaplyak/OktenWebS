@@ -7,13 +7,25 @@ import {HttpClientModule} from "@angular/common/http";
 import { AllUsersComponent } from './components/all-users/all-users.component';
 import { UserComponent } from './components/user/user.component';
 import { UserViewComponent } from './components/user-view/user-view.component';
+import { AllPostsComponent } from './components/all-posts/all-posts.component';
+import { PostComponent } from './components/post/post.component';
+import { PostViewComponent } from './components/post-view/post-view.component';
+import { AllCommentsComponent } from './components/all-comments/all-comments.component';
+import { CommentComponent } from './components/comment/comment.component';
+import { CommentViewComponent } from './components/comment-view/comment-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AllUsersComponent,
     UserComponent,
-    UserViewComponent
+    UserViewComponent,
+    AllPostsComponent,
+    PostComponent,
+    PostViewComponent,
+    AllCommentsComponent,
+    CommentComponent,
+    CommentViewComponent
   ],
   imports: [
     BrowserModule,
