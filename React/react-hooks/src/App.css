@@ -1,0 +1,10 @@
+body {
+  padding: 20px;
+  text-align: center;
+}
+
+.option {
+  border: 1px solid black;
+  margin: 0;
+  padding: 10px 20px;
+}
